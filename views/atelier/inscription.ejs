@@ -18,7 +18,7 @@
         <section class="container mb-5 pl-5 pr-5 pb-5 animated fadeIn">
             <div class="row">
                 <div class="col-md-8 col-sm-12">
-                    <img src="/img/<%= atelier.image %>" class="w-100">
+                    <img src="/img/<%= atelier.image %>" class="img_inscription" alt="">
                     <h3 class="title_page mt-3 orange">Description</h3>
                     <p class="mt-2"><%= atelier.description %></p>
                 </div>
@@ -26,6 +26,7 @@
                     <h2 class="title_page orange mb-3">
                       Atelier <%= atelier.titre %>
                     </h2>
+                    <hr>
                     <div class="mb-1">
                         <h4>
                             <i class="far fa-clock pink"></i>
@@ -36,7 +37,7 @@
                     <div class="mb-1">
                         <h4>
                             <i class="far fa-hourglass pink"></i>
-                            Durée : <%= atelier.duree %>
+                            Durée : <%= atelier.duree %>h
                         </h4>
                         <hr>
                     </div>    
@@ -70,17 +71,17 @@
                     <form action="/ateliers/saveInscription/<%= atelier._id %>" method="POST">
                         <div class="form-group">
                         <label for="name">Nom: </label>
-                        <input class="form-control" type="text" name="firstname">
+                        <input class="form-control" type="text" name="firstname" required>
                         </div>    
                         <div class="form-group">
                             <label for="name">Prenom: </label>
-                            <input class="form-control" type="text" name="lastname">
+                            <input class="form-control" type="text" name="lastname" required>
                         </div>    
                         <div class="form-group">
                             <label for="name">Mail: </label>
                             <input class="form-control" type="email" name="email">
                         </div>    
-                        <input class="btn btn-primary btn_orange border-0" type="submit" value="S'inscrire">
+                        <input class="btn btn-primary btn_orange border-0" type="submit" value="S'inscrire" required>
                     </form>
                 </div> 
             </div>       

@@ -22,7 +22,7 @@
                     <form action="/ateliers/save" method="POST" enctype="multipart/form-data" class="needs-validation">
                         <div class="form-group">
                             <label>Titre :</label>
-                            <input class="form-control" type="text" name="titre" >
+                            <input class="form-control" type="text" name="titre" required >
                         </div>
                         <div class="form-group"></div>
                             <label>Description :</label> 
@@ -32,11 +32,11 @@
                         <div class="row col-sm-12 col-md-12">
                             <div class=" col-md-6 col-sm-12 form-group">
                                 <label>Date :</label>
-                                <input class="form-control" type="date" name="lastname" >
+                                <input class="form-control" type="date" name="lastname" required >
                             </div>   
                             <div class="col-md-6 col-sm-12 form-group">
                                 <label>Horaire :</label> 
-                                <input class="form-control" type="time" name="horaire" >
+                                <input class="form-control" type="time" name="horaire" required >
                             </div>
                         </div>
                         <div class="row col-sm-12 col-md-12">
@@ -46,24 +46,24 @@
                             </div>
                             <div class="col-md-6 col-sm-12 form-group">
                                 <label>Place disponible :</label>
-                                <input class="form-control" type="number" name="place_disponible" >
+                                <input class="form-control" type="number" name="place_disponible" required >
                             </div> 
                         </div>   
                         <div class="row col-sm-12 col-md-12">    
                             <div class="col-md-6 col-sm-12 form-group">
                                 <label>Places reservées :</label>
-                                <input class="form-control" type="number" name="place_reserve" >
+                                <input class="form-control" type="number" name="place_reserve" required >
                             </div>
                             <div class="col-md-6 col-sm-12 form-group">    
                                 <label> Prix :</label>
-                                <input class="form-control" type="number" name="prix" >
+                                <input class="form-control" type="number" name="prix" required >
                             </div>
                         </div>  
                         <div class="row col-sm-12 col-md-12">      
                             <div class="col-md-6 col-sm-4 form-group"> 
                                 <label>Télécharger une image :</label> 
-                                <input class="form-control" type="file" name="image2" id="image2"  placeholder="image"  />
-                                <input class="form-control" type="text" name="image" id="image" placeholder="image" />
+                                <input class="form-control" type="file" name="image2" id="image2"  placeholder="image"  required />
+                                <input class="form-control invisible" type="text" name="image" id="image" placeholder="image" />
                             </div>
                             <div class="col-md-6 col-sm-12 form-group">     
                                 <input class="btn btn-primary btn_orange border-0 text-uppercase" type="submit" value="Créer">
@@ -75,25 +75,25 @@
         </section>
     </main>    
     <script>
-        // Validation des champs du formulaire via JavaScript
-        (function () {
-            'use strict';
-            window.addEventListener('load', function () {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function (form) {
-                    form.addEventListener('submit', function (event) {
-                        $('#image').val($('#image2').prop('files')[0].name);
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
+            // Validation des champs du formulaire via JavaScript
+            (function () {
+                'use strict';
+                window.addEventListener('load', function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            $('#image').val($('#image2').prop('files')[0].name);
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
 
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
-    </script>
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
 <% include ../partials/footer.ejs %>           

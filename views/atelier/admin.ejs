@@ -26,7 +26,7 @@
                         <% for (var i = 0; i<ateliers.length; i++) { %>
 
                             <article class="col-md-4 mb-5 pb-3">
-                                <img src="/img/<%= ateliers[i].image %>" class="w-100">
+                                <img src="/img/<%= ateliers[i].image %>" class="img_atelier" alt="">
                                 <h3 class="mt-3 pink">Atelier
                                     <%= ateliers[i].titre %>
                                         <hr>
@@ -45,7 +45,7 @@
                                 </p>
                                 <p>
                                     <b>duree :</b>
-                                    <%= ateliers[i].duree %> min</p>
+                                    <%= ateliers[i].duree %> h</p>
                                 <p>
                                     <b>Places disponibles :</b>
                                     <%= ateliers[i].place_disponible %>

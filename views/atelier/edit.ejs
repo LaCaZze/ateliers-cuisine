@@ -23,50 +23,48 @@
                             <form action="/ateliers/update/<%= atelier._id %>" method="POST" class="mt-5 needs-validation" enctype="multipart/form-data">
                                 <div class="col-sm-12 col-md-12 form-group">
                                     <label>Titre atelier:</label>
-                                    <input class="form-control" type="text" name="titre" value="<%= atelier.titre %>" placeholder="titre" />
+                                    <input class="form-control" type="text" name="titre" value="<%= atelier.titre %>" placeholder="titre" required />
                                 </div>
                                 <div class="col-sm-12 col-md-12 form-group">
                                     <label> Description: </label>
-                                    <!--<input class="form-control" type="text" name="description" value="<%= atelier.description %>" placeholder="description" />-->
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" value="<%= atelier.description %>" placeholder="Description"></textarea>
+                                    <input class="form-control" type="text" name="description" value="<%= atelier.description %>" placeholder="description" />
+                                    <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" value="<%= atelier.description %>" placeholder="Description" required></textarea> -->
                                 </div>
                                 <div class="row col-sm-12 col-md-12">
                                     <div class=" col-md-6 col-sm-12 form-group">
                                         <label> Date: </label>
-                                        <input class="form-control" type="date" name="date" value="<%= atelier.date %>" placeholder="date" />
+                                        <input class="form-control" type="date" name="date" value="<%= atelier.date %>" placeholder="date" required />
                                     </div>
                                     <div class="col-md-6 col-sm-12 form-group">
                                         <label> Horaire:</label>
-                                        <input class="form-control" type="text" name="horaire" value="<%= atelier.horaire %>" placeholder="horaire" />
+                                        <input class="form-control" type="text" name="horaire" value="<%= atelier.horaire %>" placeholder="horaire" required />
                                     </div>
                                 </div>
                                 <div class="row col-sm-12 col-md-12">
                                     <div class=" col-md-6 col-sm-12 form-group">
                                         <label> Durée en heure:</label>
-                                        <input class="form-control" type="text" name="duree" value="<%= atelier.duree %>" placeholder="duree" />
+                                        <input class="form-control" type="text" name="duree" value="<%= atelier.duree %>" placeholder="duree" required />
                                     </div>
                                     <div class="col-md-6 col-sm-12 form-group">
                                         <label> Places disponibles: </label>
-                                        <input class="form-control" type="number" name="place_disponible" value="<%= atelier.place_disponible %>" placeholder="place_disponible"
-                                        />
+                                        <input class="form-control" type="number" name="place_disponible" value="<%= atelier.place_disponible %>" placeholder="place_disponible" required/>
                                     </div>
                                 </div>
                                 <div class="row col-sm-12 col-md-12">
                                     <div class=" col-md-6 col-sm-12 form-group">
                                         <label> Places reservées: </label>
-                                        <input class="form-control" type="number" name="place_reserve" value="<%= atelier.place_reserve %>" placeholder="place_reserve"
-                                        />
+                                        <input class="form-control" type="number" name="place_reserve" value="<%= atelier.place_reserve %>" placeholder="place_reserve" required/>
                                     </div>
                                     <div class=" col-md-6 col-sm-12 form-group">
                                         <label> Prix: </label>
-                                        <input class="form-control" type="number" name="prix" value="<%= atelier.prix %>" placeholder="prix" />
+                                        <input class="form-control" type="number" name="prix" value="<%= atelier.prix %>" placeholder="prix" required />
                                     </div>
                                 </div>
                                 <div class="row col-sm-12 col-md-12">
                                     <div class=" col-md-6 col-sm-12 form-group">
                                         <label> Image: </label>
-                                        <input class="form-control" type="file" name="image2" id="image2" value="<%= atelier.image %>" placeholder="image" />
-                                        <input class="form-control" type="text" name="image" id="image" value="<%= atelier.image %>" placeholder="image" />
+                                        <input class="form-control" type="file" name="image2" id="image2" value="<%= atelier.image %>" placeholder="image"  />
+                                        <input class="form-control invisible" type="text" name="image" id="image" value="<%= atelier.image %>" placeholder="image" />
                                     </div>
                                     <div class=" col-md-6 col-sm-12 form-group">
                                         Active:
