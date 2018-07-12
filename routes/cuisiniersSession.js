@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var cuisinier = require("../controllers/CuisinierController");
+var particulier = require("../controllers/ParticulierController");
 
 function requireLogin (req, res, next) {
     if (req.session && req.session.userId) {
@@ -13,6 +14,9 @@ function requireLogin (req, res, next) {
         console.log('TU N AS PAS LE DROIT !!');
     }
 }
+
+//recuperer les ateliers active
+router.get("/inscrit", particulier.listIncrit);
 
 //renvoi vers inscription et identification cuisinier
 router.get("/", cuisinier.identification);

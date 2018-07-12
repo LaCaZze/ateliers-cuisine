@@ -1,0 +1,27 @@
+<% include ../partials/head.ejs %>
+
+
+    <section class="container bg-white p-5">
+        <div class="row mb-5 animated-1 fadeIn">
+            <% for (var i = 0; i<particuliers.length; i++) { %>
+
+                <article class="col-md-4 mb-5 pb-3">
+
+                    <h3 class="mt-3 pink">Inscrit
+                        <%= particuliers[i].firstname %>
+                            <hr>
+                    </h3>
+                    <p>
+                        <b>Date :</b>
+                        <%= particuliers[i].lastname %>
+                    </p>
+                    <p>
+                        <b>Description :</b>
+                        <%= particuliers[i].email %>
+                    </p>
+
+                </article>
+                <% } %>
+                    <% } %>
+        </div>
+    </section>

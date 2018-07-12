@@ -13,4 +13,13 @@ var AtelierSchema = new mongoose.Schema({
     active: String
 });
 
+
+// var AtelierSchema = new mongoose.Schema({
+//     firstname: String,
+//     lastname: String,
+//     email: String,
+
+// });
+
 module.exports = mongoose.model("Atelier", AtelierSchema);
+// module.exports = mongoose.model("Particulier", ParticulierSchema);

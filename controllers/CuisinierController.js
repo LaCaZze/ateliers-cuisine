@@ -82,5 +82,6 @@ CuisinierController.logout = function(req, res){
   }
 };
 
+
 //export du module
 module.exports = CuisinierController;

@@ -69,6 +69,11 @@ router.get("/edit/:id",requireLogin, atelier.edit);
 //editer une inscription pour un atelier
 router.get("/inscription/:id", atelier.inscription);
 
+
+//editer une sauvegarde inscription pour un particulier
+router.post("/saveInscription/:id", atelier.saveParticulier);
+
+
 //voir un machine par son id
 router.get("/show/:id",requireLogin, atelier.show);
 
